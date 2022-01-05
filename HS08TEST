@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main()
+{
+    int amountToBeWithdrawn;
+    float initialAmount,finalAmount,withdrawn;
+    scanf("%d\n",&amountToBeWithdrawn);
+    scanf("%f",&initialAmount);
+    if(amountToBeWithdrawn % 5 != 0) finalAmount =initialAmount;
+    else
+    {
+        withdrawn=amountToBeWithdrawn;
+        finalAmount=initialAmount-withdrawn-0.5;
+        if(finalAmount<0)finalAmount=initialAmount;
+    }
+    printf("%.2f",finalAmount);
+    return 0;
+}
